@@ -19,16 +19,6 @@ namespace Lab10
             Console.WriteLine("Welcome to the Movie List Application!!!\n");
 
 
-            // Continue Loop
-            if (!Validation.GetContinue())
-            {
-                return;
-            }
-
-
-            //Console.WriteLine("Please Choose To Search By Movie Title or Movie Category");
-            //Validation.GetValidString();
-
 
             #region Movie List
 
@@ -84,15 +74,37 @@ namespace Lab10
 
             bool loop = true;
 
-            //while(loop)
-            
+            while (loop)
+            {
                 Console.WriteLine("--- There Are 18 Movies In This List ---\n");
-                Console.WriteLine("Please Choose From The Following Categories:\n\n  --->  SciFi\n  --->  Comedy\n  --->  Romantic Comedy\n  --->  Animation\n  --->  Drama\n  --->  Action\n  --->  Horror");
-                //string input = Console.ReadLine().ToUpper();
+                Console.WriteLine("Please Choose From The Following Categories:\n");
 
-            
 
+                for (int i = 0; i < Genres.Length; i++)
+                {
+                    Console.WriteLine($"  --->  {i + 1}\t{Genres[i]}");
+
+                }
+
+                int CategoryInput = Validation.GetRange(1, 7);
+
+
+                foreach (Movie element in MList)
+                {
+                    if (element.MovieCategory == Genres[CategoryInput - 1].ToUpper())
+                    
+                    {
+                        Console.WriteLine(element.MovieTitle);
+                    }
+                }
+
+                // Continue Loop
+                if (!Validation.GetContinue())
+                {
+                    return;
+                }
             }
         }
     }
+}
 

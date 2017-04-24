@@ -52,5 +52,50 @@ namespace Lab10
                 Console.ForegroundColor = ConsoleColor.Green;   // Green to Go Back to Original Color
             }
         }
+
+
+
+
+        // Method to Get Valid Integer
+        public static int GetValidInt()
+        {
+
+            int number;
+
+            // Validate Input
+            while (!int.TryParse(Console.ReadLine(), out number))
+            {
+                Console.WriteLine();
+
+                // Number Validation with Colors
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine();
+                Console.Write("You Must Enter a Number:  --->   ");
+                Console.ForegroundColor = ConsoleColor.Green;
+
+            }
+            return number;
+        }
+
+
+
+        // Method to Get Input and Validate That Number is Between Min and Max
+        public static int GetRange(int min, int max)
+        {
+
+            // Get a Valid Int from Previous Method
+            int number = GetValidInt();
+
+            while (number < min || number > max)
+            {
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write($"You MUST Enter a Number That is in Between {min} and {max}  --->   ");
+                Console.ForegroundColor = ConsoleColor.Green;
+                number = GetValidInt();
+            }
+            return number;
+
+        }
     }
 }
