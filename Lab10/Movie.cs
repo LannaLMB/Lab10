@@ -64,14 +64,6 @@ namespace Lab10
             Title = TitleInput;
         }
 
-
-        ////Default Input
-        //public Movie()
-        //{
-
-        //    Category = "Science Fiction";
-        //    Title = "Dark Skies";
-        //}
         #endregion
     }
 }
