@@ -107,50 +107,8 @@ namespace Lab10
 
                 // Genre Choice Output
                 Console.WriteLine();
-
-                // SciFi
-                if (CategoryInput == 1)
-                {
-                    Console.WriteLine("You Chose The Genre SciFi -- The Movies in that Category Are As Follows");
-                }
-
-                // Comedy
-                else if (CategoryInput == 2)
-                {
-                    Console.WriteLine("You Chose The Genre Comedy -- The Movies in that Category Are: ");
-                }
-
-                // Romantic Comedy
-                else if (CategoryInput == 3)
-                {
-                    Console.WriteLine("You Chose The Genre Romantic Comedy -- The Movies in that Category Are: ");
-                }
-
-                // Animation
-                else if (CategoryInput == 4)
-                {
-                    Console.WriteLine("You Chose The Genre Animation -- The Movies in that Category Are: ");
-                }
-
-                // Drama
-                else if (CategoryInput == 5)
-                {
-                    Console.WriteLine("You Chose The Genre Drama -- The Movies in that Category Are: ");
-                }
-
-                // Action
-                else if (CategoryInput == 6)
-                {
-                    Console.WriteLine("You Chose The Genre Action -- The Movies in that Category Are: ");
-                }
-
-                // Horror
-                else if (CategoryInput == 7)
-                {
-                    Console.WriteLine("You Chose The Genre Horror -- The Movies in that Category Are: ");
-                }
-
-                Console.WriteLine("------------------------------------------------------------------------\n");
+                Console.WriteLine($"You Chose The Genre {Genres[CategoryInput - 1]} -- The Movies in that Category Are As Follows");
+                Console.WriteLine("-----------------------------------------------------------------------------\n");
 
 
                 // Prints Movies of Selected Genre
