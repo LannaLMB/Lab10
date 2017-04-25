@@ -56,8 +56,8 @@ namespace Lab10
         #region Constructors
 
         // Input
-        public Movie(string CategoryInput,
-            string TitleInput)
+        public Movie(string TitleInput,
+            string CategoryInput)
         {
 
             Category = CategoryInput;
